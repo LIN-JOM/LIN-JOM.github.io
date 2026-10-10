@@ -5,13 +5,16 @@ timezone: Asia/Shanghai
 markdown: kramdown
 permalink: /posts/:title/
 
+# 允许发布日期在未来的文章（否则 GitHub 服务器按时区判断，新文章会 404）
+future: true
+
 # 站点信息：GitHub Actions 用它生成正确的绝对链接
-url: https://yejianqin61-cell.github.io
+url: https://LIN-JOM.github.io
 baseurl: ""
 
 # 个人信息：首页、页脚与关于页都读取这里
 author: LIN JOM
-github_username: yejianqin61-cell
+github_username: LIN-JOM
 email: 2424145547@qq.com
 bio: 我在做一个不需要构建工具的纯静态博客，把学到的东西写下来。
 

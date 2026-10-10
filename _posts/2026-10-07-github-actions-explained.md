@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 第一次看懂 GitHub Actions 是怎么发布网站的
-date: 2026-10-18
+date: 2026-10-07
 excerpt: 推送之后网页自己更新了，我想搞清楚中间到底发生了什么。
 tags:
   - GitHub Actions

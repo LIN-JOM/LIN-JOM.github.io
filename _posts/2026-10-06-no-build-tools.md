@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 我为什么没有用 npm 和构建工具
-date: 2026-10-15
+date: 2026-10-06
 excerpt: 一个纯静态博客，其实不需要 node_modules 这一百兆的依赖。
 tags:
   - 思考

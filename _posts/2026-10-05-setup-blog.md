@@ -1,7 +1,7 @@
 ---
 layout: post
 title: 用 Jekyll 和 GitHub Pages 搭一个不要构建工具的博客
-date: 2026-10-12
+date: 2026-10-05
 excerpt: 从模板到可以访问的网址，记录我把这个博客搭起来的过程。
 tags:
   - Jekyll
@@ -16,13 +16,13 @@ tags:
 
 原因很直接：**Markdown 文件就是文章本身**。
 
-`_posts/2026-10-12-setup-blog.md` 这样一个文件，前面写上几行 front matter，后面正常写 Markdown，推送之后 GitHub 就会把它编译成 HTML 页面。
+`_posts/2026-10-05-setup-blog.md` 这样一个文件，前面写上几行 front matter，后面正常写 Markdown，推送之后 GitHub 就会把它编译成 HTML 页面。
 
 ```yaml
 ---
 layout: post
 title: 文章标题
-date: 2026-10-12
+date: 2026-10-05
 excerpt: 一句话摘要
 tags:
   - Jekyll

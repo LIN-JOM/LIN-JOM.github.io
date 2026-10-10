@@ -12,12 +12,30 @@ import re
 W = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 OUT = os.path.join(W, "_preview")
 
-SITE = {
-    "title": "LIN JOM · 个人博客",
-    "github_username": "yejianqin61-cell",
-    "email": "2424145547@qq.com",
-    "bio": "我在做一个不需要构建工具的纯静态博客，把学到的东西写下来。",
-}
+
+def load_config():
+    """直接读 _config.yml，避免预览和真实站点配置不一致。"""
+    cfg = {}
+    fmt = None                      # 当前解析的是哪个多行块
+    for line in open(os.path.join(W, "_config.yml"), encoding="utf-8"):
+        line = line.rstrip("\n")
+        if fmt:
+            if line.startswith((" ", "\t")) and line.strip():
+                cfg[fmt] += " " + line.strip()
+                continue
+            fmt = None
+        if not line.strip() or line.lstrip().startswith("#") or ":" not in line:
+            continue
+        key, val = line.split(":", 1)
+        key, val = key.strip(), val.strip()
+        if val.startswith((">", "|")):
+            cfg[key] = ""; fmt = key
+        elif val:
+            cfg[key] = val.strip('"').strip("'")
+    return cfg
+
+
+SITE = load_config()
 NAME = SITE["title"].split("·")[0].strip()
 
 
