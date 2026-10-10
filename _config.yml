@@ -1,0 +1,21 @@
+title: LIN JOM · 个人博客
+description: 记录我在网页、写作与设计上正在学习的东西。
+lang: zh-CN
+timezone: Asia/Shanghai
+markdown: kramdown
+permalink: /posts/:title/
+
+# 站点信息：GitHub Actions 用它生成正确的绝对链接
+url: https://yejianqin61-cell.github.io
+baseurl: ""
+
+# 个人信息：首页、页脚与关于页都读取这里
+author: LIN JOM
+github_username: yejianqin61-cell
+email: 2424145547@qq.com
+bio: 我在做一个不需要构建工具的纯静态博客，把学到的东西写下来。
+
+exclude:
+  - README.md
+  - Gemfile
+  - Gemfile.lock

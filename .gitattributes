@@ -1,0 +1,10 @@
+# 统一使用 LF，避免 Windows 的 CRLF 混入仓库导致 Jekyll / Actions 出现差异
+* text=auto eol=lf
+
+*.png binary
+*.jpg binary
+*.jpeg binary
+*.gif binary
+*.ico binary
+*.woff binary
+*.woff2 binary

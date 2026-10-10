@@ -1,0 +1,38 @@
+---
+layout: default
+---
+<section id="top" class="wrap hero" aria-labelledby="hero-title">
+  <div>
+    <p class="eyebrow">Personal blog · {{ 'now' | date: '%Y' }}</p>
+    <h1 id="hero-title">你好，我是<br>{{ site.title | split: '·' | first }}。</h1>
+    <p class="hero-copy">{{ site.bio | default: '我在这里记录正在学习的东西、做过的小项目，以及一些不想忘记的想法。' }}</p>
+    <div class="hero-actions">
+      <a class="button primary" href="#writing">读读我的文章</a>
+      <a class="button secondary" href="mailto:{{ site.email }}">给我发邮件</a>
+    </div>
+  </div>
+  <div class="hero-card" aria-label="个人头像占位图"><div class="avatar">LJ</div></div>
+</section>
+
+<section id="writing" class="wrap section" aria-labelledby="writing-title">
+  <div class="section-heading"><div><p class="eyebrow">Latest notes</p><h2 id="writing-title">最近写了什么</h2><div class="rule"></div></div><p>每篇文章都是 <code>_posts</code> 里的一个 Markdown 文件。</p></div>
+  <div class="article-grid">
+    {% for post in site.posts limit: 6 %}
+    <article class="card">
+      <div class="card-meta">{{ post.date | date: '%Y.%m.%d' }}{% if post.tags %} · {{ post.tags | first }}{% endif %}</div>
+      <h3>{{ post.title }}</h3>
+      <p>{{ post.excerpt | strip_html | truncate: 100 }}</p>
+      <a class="card-link" href="{{ post.url | relative_url }}">阅读文章 →</a>
+    </article>
+    {% endfor %}
+  </div>
+</section>
+
+<section id="projects" class="wrap section" aria-labelledby="projects-title">
+  <div class="section-heading"><div><p class="eyebrow">Selected work</p><h2 id="projects-title">做过的小项目</h2><div class="rule"></div></div><p>这些是自己动手做出来的东西，代码都放在 GitHub 上。</p></div>
+  <div class="project-grid">
+    <article class="card"><div class="card-meta">PROJECT 01</div><h3>这个个人博客</h3><p>用 Jekyll 模板搭的纯静态博客，没有构建工具，推送到 main 就自动发布。</p><a class="card-link" href="https://github.com/{{ site.github_username }}">查看源码 →</a></article>
+    <article class="card"><div class="card-meta">PROJECT 02</div><h3>HTML/CSS 练习页</h3><p>不依赖任何框架和 CDN，只用原生 HTML 和 CSS 排版的练习作品集。</p><a class="card-link" href="https://github.com/{{ site.github_username }}">查看源码 →</a></article>
+    <article class="card"><div class="card-meta">PROJECT 03</div><h3>下一步想做的</h3><p>一个还没完成、但值得继续记录的想法，做好之后会放到这里。</p><a class="card-link" href="mailto:{{ site.email }}">和我聊聊 →</a></article>
+  </div>
+</section>

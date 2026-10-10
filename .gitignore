@@ -1,0 +1,13 @@
+# 本地预览产物与预览脚本（不属于站点内容，Jekyll 也会忽略下划线开头的文件）
+_preview/
+_preview_render.py
+
+# Jekyll 构建输出
+_site/
+.jekyll-cache/
+.jekyll-metadata
+
+# 系统文件
+.DS_Store
+Thumbs.db
+desktop.ini
